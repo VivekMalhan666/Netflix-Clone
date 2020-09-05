@@ -26,7 +26,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row_posters">
-        {/* row_posters */}
         {movies.map((movie) => (
           <img
             key={movie.id}
