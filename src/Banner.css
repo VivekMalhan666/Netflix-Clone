@@ -2,6 +2,8 @@
   color: white;
   object-fit: contain;
   height: 448px;
+  background-position: 50% 20%;
+  background-size: contain;
 }
 .banner__contents {
   margin-left: 30px;
