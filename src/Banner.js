@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "./axios";
 import requests from "./requests";
 import "./Banner.css";
+import YouTube from "react-youtube";
+import movieTrailer from "movie-trailer";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
+  const [trailerUrl, setTrailerUrl] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -17,6 +20,26 @@ function Banner() {
     }
     fetchData();
   }, []);
+  const handleClick = (movie) => {
+    if (trailerUrl) {
+      setTrailerUrl("");
+    } else {
+      movieTrailer(movie?.name || "")
+        .then((url) => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get("v"));
+        })
+        .catch((error) => console.log(error));
+    }
+  };
+
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
 
   console.log(movie);
 
@@ -40,7 +63,9 @@ function Banner() {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
+          <button className="banner__button" onClick={() => handleClick(movie)}>
+            Play
+          </button>
           <button className="banner__button">My List</button>
         </div>
         <h1 className="banner__description">
@@ -49,6 +74,8 @@ function Banner() {
       </div>
 
       <div className="banner--fadeBottom" />
+
+      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </header>
   );
 }
