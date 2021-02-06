@@ -4,11 +4,12 @@ import SignUpScreen from "../Components/SignUp";
 
 function LoginScreen() {
   const [login, setLogin] = useState(false);
-
+  const [email, setEmail] = useState("");
   const reachSignUp = () => {
     setLogin(true);
   };
 
+  console.log(email);
   return (
     <div className="loginScreen">
       <div className="loginScreen__background">
@@ -33,7 +34,11 @@ function LoginScreen() {
             </h3>
             <div className="loginScreen__input">
               <form>
-                <input type="email" placeholder="Email Address" />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
                 <button
                   className="loginScreen__getStarted"
                   onClick={reachSignUp}
@@ -44,7 +49,7 @@ function LoginScreen() {
             </div>
           </>
         ) : (
-          <SignUpScreen />
+          <SignUpScreen email={email} />
         )}
       </div>
     </div>

@@ -3,12 +3,13 @@ import "../assets/SignUp.css";
 import { auth } from "../firebase";
 import SignInScreen from "./SignIn";
 
-function SignUpScreen() {
+function SignUpScreen({ email }) {
   const [login, setLogin] = useState(false);
   const displayNameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
+  console.log(email);
   const register = (e) => {
     e.preventDefault();
     auth
@@ -42,7 +43,12 @@ function SignUpScreen() {
               placeholder="Full Name"
               type="username"
             />
-            <input ref={emailRef} placeholder="Email" type="email" />
+            <input
+              ref={emailRef}
+              placeholder="Email"
+              type="email"
+              value={email}
+            />
             <input ref={passwordRef} placeholder="Password" type="Password" />
             <button type="submit" onClick={register}>
               Sign Up
