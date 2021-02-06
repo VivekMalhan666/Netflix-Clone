@@ -9,7 +9,6 @@ function SignUpScreen({ email }) {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
-  console.log(email);
   const register = (e) => {
     e.preventDefault();
     auth
@@ -18,9 +17,7 @@ function SignUpScreen({ email }) {
         passwordRef.current.value
       )
       .then((authuser) => {
-        authuser.user.updateProfile({
-          displayName: displayNameRef,
-        });
+        console.log(authuser);
       })
       .catch((error) => {
         alert(error.message);
@@ -43,12 +40,7 @@ function SignUpScreen({ email }) {
               placeholder="Full Name"
               type="username"
             />
-            <input
-              ref={emailRef}
-              placeholder="Email"
-              type="email"
-              value={email}
-            />
+            <input ref={emailRef} placeholder="Email" type="email" />
             <input ref={passwordRef} placeholder="Password" type="Password" />
             <button type="submit" onClick={register}>
               Sign Up

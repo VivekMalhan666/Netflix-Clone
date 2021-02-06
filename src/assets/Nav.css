@@ -19,6 +19,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 .nav_avatar {
   position: fixed;
@@ -27,4 +28,5 @@
   width: 30px;
   object-fit: contain;
   height: 30px;
+  cursor: pointer;
 }
