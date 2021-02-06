@@ -1,0 +1,19 @@
+.footer {
+  color: #fff;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+}
+.footer > h3 {
+  font-size: 2rem;
+}
+.footer__start {
+  font-weight: 400;
+  color: gray;
+}
+.footer > p {
+  color: gray;
+}

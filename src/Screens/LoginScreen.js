@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/LoginScreen.css";
+import Footer from "../Components/Footer";
 import SignUpScreen from "../Components/SignUp";
 
 function LoginScreen() {
@@ -50,6 +51,7 @@ function LoginScreen() {
         ) : (
           <SignUpScreen email={email} />
         )}
+        <Footer />
       </div>
     </div>
   );
