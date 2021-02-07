@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is hosted live at https://netflix-clone-afcdd.web.app/ .
+This project is hosted live at https://netflix-clone-afcdd.firebaseapp.com/ .
+
+<img style="height:500px" alt="netflix clone" src="public/Netflix-clone.jpg">
 
 ## Available Scripts
 
@@ -28,3 +30,12 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### The following Technologies were used to develop this application
+
+    1. React js.
+    2. Custom media query to achieve responsiveness.
+    3. Authentication using Email and Password.
+    4. React Redux.
+    5. React Router Dom.
+    6. Video Trailers.
