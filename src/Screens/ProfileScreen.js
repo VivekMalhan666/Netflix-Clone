@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "../assets/ProfileScreen.css";
+import Footer from "../Components/Footer";
 import Nav from "../Components/Nav";
 import { selectUser } from "../features/counter/userSlice";
 import { auth } from "../firebase";
@@ -28,6 +29,7 @@ function ProfileScreen() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -47,11 +47,11 @@ function LoginScreen() {
                 </button>
               </form>
             </div>
+            <Footer />
           </>
         ) : (
           <SignUpScreen email={email} />
         )}
-        <Footer />
       </div>
     </div>
   );
