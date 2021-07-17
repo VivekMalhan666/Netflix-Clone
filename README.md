@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is hosted live at https://netflix-clone-afcdd.firebaseapp.com/ .
+This project is hosted live at https://netflix-clone-7ee87.web.app/ .
 
 <img style="height:500px" alt="netflix clone" src="public/Netflix-clone.jpg">
 
